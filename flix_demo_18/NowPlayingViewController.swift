@@ -8,10 +8,17 @@
 
 import UIKit
 
-class NowPlayingViewController: UIViewController {
-
+class NowPlayingViewController:
+UIViewController, UITableViewDataSource {
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    var movies: [[String: Any]] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.dataSource = self
 
         let url = URL(string: "https://api.themoviedb.or3/movie/{movie_id}?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed&language=en-USd")!
         
@@ -24,19 +31,29 @@ class NowPlayingViewController: UIViewController {
             } else if let data = data {
                     let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
                 let movies = dataDictionary["results"] as! [[String: Any]]
-                for movie in movies {
-                    let title = movie["title"] as! String
-                    print(title)
-                }
+                self.movies = movies
         }
     }
         task.resume()
     }
-
-override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return movies.count
     }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell", for: indexPath) as! MovieCell
+        
+        let movie = movies[indexPath.row]
+        let title = movie["title"] as! String
+        let overview = movie["overview"] as! String
+        cell.titleLabel.text = title
+        cell.overviewLabel.text = overview
+        
+        return cell
+    }
+
+
     
 
 }
