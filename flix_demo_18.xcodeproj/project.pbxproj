@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		9B735E9C215464E400304E6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B735E9B215464E400304E6E /* AppDelegate.swift */; };
-		9B735E9E215464E400304E6E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B735E9D215464E400304E6E /* ViewController.swift */; };
 		9B735EA1215464E400304E6E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B735E9F215464E400304E6E /* Main.storyboard */; };
 		9B735EA3215464E500304E6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B735EA2215464E500304E6E /* Assets.xcassets */; };
 		9B735EA6215464E500304E6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B735EA4215464E500304E6E /* LaunchScreen.storyboard */; };
 		9B735EB1215464E500304E6E /* flix_demo_18Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B735EB0215464E500304E6E /* flix_demo_18Tests.swift */; };
 		9B735EBC215464E500304E6E /* flix_demo_18UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B735EBB215464E500304E6E /* flix_demo_18UITests.swift */; };
+		9B735ECC2154750500304E6E /* NowPlayingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B735ECB2154750500304E6E /* NowPlayingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +36,6 @@
 /* Begin PBXFileReference section */
 		9B735E98215464E400304E6E /* flix_demo_18.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = flix_demo_18.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B735E9B215464E400304E6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9B735E9D215464E400304E6E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9B735EA0215464E400304E6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9B735EA2215464E500304E6E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9B735EA5215464E500304E6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +46,7 @@
 		9B735EB7215464E500304E6E /* flix_demo_18UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = flix_demo_18UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B735EBB215464E500304E6E /* flix_demo_18UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flix_demo_18UITests.swift; sourceTree = "<group>"; };
 		9B735EBD215464E500304E6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B735ECB2154750500304E6E /* NowPlayingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +97,8 @@
 		9B735E9A215464E400304E6E /* flix_demo_18 */ = {
 			isa = PBXGroup;
 			children = (
+				9B735ECB2154750500304E6E /* NowPlayingViewController.swift */,
 				9B735E9B215464E400304E6E /* AppDelegate.swift */,
-				9B735E9D215464E400304E6E /* ViewController.swift */,
 				9B735E9F215464E400304E6E /* Main.storyboard */,
 				9B735EA2215464E500304E6E /* Assets.xcassets */,
 				9B735EA4215464E500304E6E /* LaunchScreen.storyboard */,
@@ -256,7 +256,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B735E9E215464E400304E6E /* ViewController.swift in Sources */,
+				9B735ECC2154750500304E6E /* NowPlayingViewController.swift in Sources */,
 				9B735E9C215464E400304E6E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
